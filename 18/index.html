@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and await promise</title>
+</head>
+<body>
+    
+    <script>
+
+        let a = 4;
+        let b = 5;
+
+        let result = a + b;
+
+        // async function getData(){
+        //     let resultFromServer =  await fetch(
+        //         "https://jsonplaceholder.typeicode.com/posts"
+        //     );
+
+        //     console.log(await resultFromServer.json());
+        // }
+
+
+        // getData();
+
+        fetch("https://jsonplaceholder.typeicode.com/posts")
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+        console.log(result);
+
+    </script>
+
+
+</body>
+</html>
